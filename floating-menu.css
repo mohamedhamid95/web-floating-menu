@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://css.gg/css');
+@import url('animations.css');
+body {
+    background-color: #f2f2f2;
+	background: url(https://images.unsplash.com/photo-1473773508845-188df298d2d1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXw0OTE4MzZ8fGVufDB8fHx8&w=1000&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+}
+
+#float-menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    z-index: 20;
+    margin: 40px;
+    max-width: 350px;
+}
+
+#float-menu .menu-toggle-btn {
+    font-size: 19px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    height: 68px;
+    padding: 10px 25px;
+    margin: 0;
+    width: 100%;
+    line-height: 1.42;
+    text-align: center;
+    white-space: normal;
+    cursor: pointer;
+    border: 2px solid transparent;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    color: #fff;
+    background: #000;
+    border-radius: 35px;
+    font-family: 'Roboto Condensed', sans-serif;
+    z-index: 20;
+}
+
+#float-menu .menu-toggle-btn:active {
+    background: #333333;
+}
+
+#float-menu #close-menu-btn {
+    display: none;
+    border-radius: 0 0 35px 35px;
+}
+
+#float-menu.open #nav-menu-btn {
+    display: none;
+}
+
+#float-menu.open #close-menu-btn {
+    display: block;
+}
+
+#float-menu .menu-toggle-btn i {
+    display: inline-block;
+    --ggs: 1.25;
+}
+
+#float-menu .menu-toggle-btn span {
+    margin-left: 5px;
+}
+
+#float-menu nav.main-nav-menu #main-nav-menu.open {
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+}
+
+#float-menu nav.main-nav-menu {
+    background: #000;
+    border: 4px solid #000;
+    border-radius: 35px 35px 0 0;
+    /* visibility: hidden; */
+    display: none;
+    -webkit-animation-name: close;
+    animation-name: close;
+}
+
+#float-menu.open nav.main-nav-menu {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+    display: block;
+    height: auto;
+}
+
+#float-menu nav.main-nav-menu ul.nav-menu {
+    background: #000;
+    list-style-type: none;
+    padding: 0;
+    max-height: 270px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: 1rem;
+}
+
+#float-menu nav.main-nav-menu ul.nav-menu .nav-menu-item {
+    display: flex;
+    position: relative;
+}
+
+#float-menu nav.main-nav-menu ul.nav-menu .nav-menu-link {
+    border: 2px solid transparent;
+    font-size: 19px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    display: block;
+    line-height: 1.42;
+    text-decoration: none;
+    text-align: center;
+    -webkit-user-select: none;
+    user-select: none;
+    -moz-appearance: none;
+    color: #fff;
+    width: 100%;
+    background: #000;
+    white-space: nowrap;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-style: italic;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.025em;
+    padding: 6px 16px;
+    position: relative;
+}
+
+#float-menu nav.main-nav-menu ul.nav-menu .nav-menu-link:hover {
+    cursor: pointer;
+}
+
+#float-menu nav.main-nav-menu ul.nav-menu .nav-menu-link:active,
+#float-menu nav.main-nav-menu ul.nav-menu .nav-menu-link:focus {
+    background: #333333;
+}
+
+#float-menu nav.main-nav-menu ul.nav-menu .menu-item-arrow {
+    position: absolute;
+    bottom: 0%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: transparent;
+    color: #fff;
+    border-color: transparent;
+}
+
+#float-menu nav.main-nav-menu ul.nav-menu .menu-item-arrow.nav-icon-left {
+    left: 20px;
+}
+
+#float-menu nav.main-nav-menu ul.nav-menu .menu-item-arrow.nav-icon-right {
+    right: 20px;
+}
+
+#float-menu .nested-menu {
+    max-height: unset !important;
+}
+
+#float-menu .nested-menu li:first-child {
+    margin-bottom: 1rem;
+}
+
+#float-menu .nav-menu.closed {
+    display: none;
+}
+
+#float-menu .nav-menu.open {
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+    display: block;
+}
+
+#float-menu button:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    #float-menu {
+        max-width: unset;
+        width: calc(100% - 40px);
+        margin: 20px;
+    }
+}

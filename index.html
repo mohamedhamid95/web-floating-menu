@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link type="text/css" rel="stylesheet" href="floating-menu.css">
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+</head>
+
+<body>
+    <div id="float-menu">
+        <nav class="main-nav-menu animated">
+            <ul id="main-nav-menu" class="nav-menu animated">
+                <li class="nav-menu-item">
+                    <a href="#" class="nav-menu-link">
+                        Home
+                    </a>
+                </li>
+                <li class="nav-menu-item">
+                    <button type="button" class="nav-menu-link" onclick="show('shop')">
+                        Shop
+                        <i class="gg-chevron-right nav-icon-right menu-item-arrow"></i> 
+                    </button>
+                </li>
+                <li class="nav-menu-item">
+                    <button type="button" class="nav-menu-link" onclick="show('lookbook')">
+                        Lookbook
+                        <i class="gg-chevron-right nav-icon-right menu-item-arrow"></i> 
+                    </button>
+                </li>
+                <li class="nav-menu-item">
+                    <button type="button" class="nav-menu-link" onclick="show('about')">
+                        About
+                        <i class="gg-chevron-right nav-icon-right menu-item-arrow"></i> 
+                    </button>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="#" class="nav-menu-link">
+                        Theme Features
+                    </a>
+                </li>
+            </ul>
+            <ul id="shop" class="nav-menu nested-menu animated closed">
+                <li class="nav-menu-item">
+                    <button type="button" class="nav-icon-left menu-item-arrow" onclick="hide('shop')">
+                        <i class="gg-chevron-left"></i> 
+                    </button>
+                    <a href="#" class="nav-menu-link">
+                        Shop
+                    </a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="#" class="nav-menu-link">
+                        Leggings
+                    </a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="#" class="nav-menu-link">
+                        Tops
+                    </a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="#" class="nav-menu-link">
+                        Bras
+                    </a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="#" class="nav-menu-link">
+                        Outwear
+                    </a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="#" class="nav-menu-link">
+                        All
+                    </a>
+                </li>
+            </ul>
+            <ul id="lookbook" class="nav-menu nested-menu animated closed">
+                <li class="nav-menu-item">
+                    <button type="button" class="nav-icon-left menu-item-arrow" onclick="hide('lookbook')">
+                        <i class="gg-chevron-left"></i> 
+                    </button>
+                    <a href="#" class="nav-menu-link">
+                        Lookbook
+                    </a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="#" class="nav-menu-link">
+                        Spring 2021
+                    </a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="#" class="nav-menu-link">
+                        Fall 2021
+                    </a>
+                </li>
+            </ul>
+            <ul id="about" class="nav-menu nested-menu animated closed">
+                <li class="nav-menu-item">
+                    <button type="button" class="nav-icon-left menu-item-arrow" onclick="hide('about')">
+                        <i class="gg-chevron-left"></i> 
+                    </button>
+                    <a href="#" class="nav-menu-link">
+                        About
+                    </a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="#" class="nav-menu-link">
+                        Our Story
+                    </a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="#" class="nav-menu-link">
+                        Training Ideas
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <button id="nav-menu-btn" class="menu-toggle-btn">
+            <i class="gg-menu-left-alt"></i>
+                        <span>Menu</span>
+        </button>
+        <button id="close-menu-btn" class="menu-toggle-btn">
+            <i class="gg-close"></i>
+        </button>
+    </div>
+    <script src="floating-menu.js"></script>
+</body>
+
+</html>
